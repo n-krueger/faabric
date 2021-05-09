@@ -103,13 +103,9 @@ void MpiWorld::create(const faabric::Message& call, int newId, int newSize)
         faabric::Message msg = faabric::util::messageFactory(user, function);
         msg.set_ismpi(true);
         msg.set_mpiworldid(id);
-<<<<<<< HEAD
         msg.set_mpirank(i);
-=======
-        msg.set_mpirank(i + 1);
         msg.set_cmdline(call.cmdline());
     }
->>>>>>> a1d0203... Set cmdline for non-zero MPI ranks
 
         sch.callFunction(msg);
     }
