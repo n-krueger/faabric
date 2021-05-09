@@ -105,7 +105,6 @@ void MpiWorld::create(const faabric::Message& call, int newId, int newSize)
         msg.set_mpiworldid(id);
         msg.set_mpirank(i);
         msg.set_cmdline(call.cmdline());
-    }
 
         sch.callFunction(msg);
     }
