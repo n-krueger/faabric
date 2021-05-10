@@ -12,6 +12,14 @@ extern "C"
 #define MPI_SUCCESS 0
 #define MPI_ERR_OTHER 1
 
+// Comparison results
+enum {
+  MPI_IDENT,
+  MPI_CONGRUENT,
+  MPI_SIMILAR,
+  MPI_UNEQUAL
+};
+
     /**
      * Custom Faabric MPI implementation
      * Official MPI spec: https://www.mpi-forum.org/docs/
@@ -572,6 +580,8 @@ extern "C"
     int MPI_Comm_split(MPI_Comm comm, int color, int key, MPI_Comm* newcomm);
 
     int MPI_Group_free(MPI_Group* group);
+
+    int MPI_Comm_compare(MPI_Comm comm1, MPI_Comm comm2, int *result);
 
     int MPI_Alltoallv(const void* sendbuf,
                       const int sendcounts[],

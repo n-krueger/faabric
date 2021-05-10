@@ -762,6 +762,13 @@ int MPI_Comm_split(MPI_Comm comm, int color, int key, MPI_Comm* newcomm)
     return MPI_SUCCESS;
 }
 
+int MPI_Comm_compare(MPI_Comm comm1, MPI_Comm comm2, int* result)
+{
+    notImplemented("MPI_Comm_compare");
+
+    return MPI_SUCCESS;
+}
+
 int MPI_Alltoallv(const void* sendbuf,
                   const int sendcounts[],
                   const int sdispls[],
