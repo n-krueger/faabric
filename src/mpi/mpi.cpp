@@ -149,7 +149,7 @@ struct faabric_op_t faabric_op_minloc
 {
     .id = FAABRIC_OP_MINLOC
 };
-struct faabric_op_null faabric_op_null
+struct faabric_op_t faabric_op_null
 {
     .id = FAABRIC_OP_NULL
 }
